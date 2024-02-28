@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- All CDN Links ! -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- Web Title ! -->
+    <title>Document</title>
+    <!-- Additional Styles ! -->
+    <style>
+        :root{
+            color: black;
+        }
+    </style>
+</head>
+    <body>
+        <header class="mt-10 mb-20 flex items-center justify-center">
+            <h1 class="text-center text-6xl text-gray-300">Hunting Phone</h1>
+        </header>
+
+        <main class="container mx-auto">
+
+            <section id="" class="bg-gray-100 my-10 mx-0 rounded-[10px] px-2 py-2 flex items-center gap-5 lg:bg-gray-100 lg:my-10 lg:mx-12 lg:rounded-[10px] lg:px-2 lg:py-2 lg:flex lg:items-center lg:gap-5">
+                <input id="search-field" type="text" placeholder="Search" class="input input-bordered w-[350px] bg-gray-300 placeholder:text-black text-black"/>
+                <button onclick="handlesearch()" id="" class="btn btn-accent hover:bg-gray-300 bg-gray-300 border-none">Search</button>
+            </section>
+
+            <!-- Search result ! -->
+            <section id="" class="w-full flex flex-col ">
+
+                <!-- Loading container ! -->
+                <div id="loading-container" class="flex items-center justify-center my-[30%] hidden">
+                    <span class="loading loading-spinner loading-lg text-white"></span>
+                </div>
+
+
+                <div id="phone-container" class="w-full grid gap-1 grid-cols-1 md:w-full md:gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 lg:w-full">
+                </div>
+
+
+                <!-- Show btn container ! -->
+                <div id="show-btn-container" class="hidden flex items-center justify-center my-8 w-full">
+                    <button class="btn btn-accent text-white hover:bg-blue-700 bg-blue-700 border-none " onclick="handleShowAll()">Show All</button>
+                </div>
+
+            </section>
+
+            <!-- Show details mordal ! -->
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="show_detalis_modal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box bg-white">
+                    <div id="show-details-container">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn text-white">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <script src="JS/phone.js"></script>
+    </body>
+</html>
