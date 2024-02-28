@@ -23,6 +23,17 @@ const displayPhones = (phones , isShowAll) => {
         phones = phones.slice(0,12)
     }
 
+    const sec1 = document.getElementById('sec1')
+    const sec2 = document.getElementById('sec2')
+    const header = document.getElementById('header')
+    const alertSec = document.getElementById('alert-sec') ;
+    if(phones.length === 0){
+        header.classList.add('hidden')
+        sec1.classList.add('hidden')
+        sec2.classList.add('hidden')
+        alertSec.classList.remove('hidden') ;
+    }
+
     phones.forEach(phone => {
 
         const phoneCard = document.createElement('div') ;
@@ -42,6 +53,19 @@ const displayPhones = (phones , isShowAll) => {
         phoneContainer.appendChild(phoneCard) ;
     });
     loadingSpinner(false)
+}
+
+const continuebtn = () => {
+    const alertSec = document.getElementById('alert-sec') ;
+    const sec1 = document.getElementById('sec1')
+    const sec2 = document.getElementById('sec2')
+    const header = document.getElementById('header')
+
+    alertSec.classList.add('hidden') ;
+    header.classList.remove('hidden')
+    sec1.classList.remove('hidden')
+    sec2.classList.remove('hidden')
+    window.location.reload()
 }
 
 const handleShowDetails = async (id) => {

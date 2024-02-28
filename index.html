@@ -16,19 +16,31 @@
     </style>
 </head>
     <body>
-        <header class="mt-10 mb-20 flex items-center justify-center">
+        <header id="header" class="mt-10 mb-20 flex items-center justify-center">
             <h1 class="text-center text-6xl text-gray-300">Hunting Phone</h1>
         </header>
 
         <main class="container mx-auto">
 
-            <section id="" class="bg-gray-100 my-10 mx-0 rounded-[10px] px-2 py-2 flex items-center gap-5 lg:bg-gray-100 lg:my-10 lg:mx-12 lg:rounded-[10px] lg:px-2 lg:py-2 lg:flex lg:items-center lg:gap-5">
+            <section id="alert-sec" class="hidden min-w-full min-h-screen flex items-center justify-center">
+                <div id="" class="w-96 h-96 rounded-xl bg-white flex items-center justify-center flex-col gap-5"> 
+                    <h1 class="text-xl font-bold text-gray-600">No Data Available please Search again !</h1>
+                    <h3 class="font-bold text-gray-600">Plz Type : <span class="font-normal">iphone</span></h3>
+                    <h3 class="font-bold text-gray-600">Plz Type : <span class="font-normal">oppo</span></h3>
+                    <h3 class="font-bold text-gray-600">Plz Type : <span class="font-normal">samsung</span></h3>
+                    <h3 class="font-bold text-gray-600">Plz Type : <span class="font-normal">huawei</span></h3>
+
+                    <button onclick="continuebtn()" id="continue-btn" class="btn ">Continue</button>
+                </div>
+            </section>
+
+            <section id="sec1" class="bg-gray-100 my-10 mx-0 rounded-[10px] px-2 py-2 flex items-center gap-5 lg:bg-gray-100 lg:my-10 lg:mx-12 lg:rounded-[10px] lg:px-2 lg:py-2 lg:flex lg:items-center lg:gap-5">
                 <input id="search-field" type="text" placeholder="Search" class="input input-bordered w-[350px] bg-gray-300 placeholder:text-black text-black"/>
                 <button onclick="handlesearch()" id="" class="btn btn-accent hover:bg-gray-300 bg-gray-300 border-none">Search</button>
             </section>
 
             <!-- Search result ! -->
-            <section id="" class="w-full flex flex-col ">
+            <section id="sec2" class="w-full flex flex-col">
 
                 <!-- Loading container ! -->
                 <div id="loading-container" class="flex items-center justify-center my-[30%] hidden">
